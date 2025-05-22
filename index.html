@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro de Imóveis</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro de Imóveis</h1>
+        <form id="property-form">
+            <label for="name">Nome do Imóvel</label>
+            <input type="text" id="name" placeholder="Ex: Casa Nova" required>
+
+            <label for="location">Localização</label>
+            <input type="text" id="location" placeholder="Ex: Rua Principal, 123" required>
+
+            <label for="status">Status</label>
+            <select id="status">
+                <option value="">Selecione</option>
+                <option value="em_construcao">Em Construção</option>
+                <option value="a_venda">À Venda</option>
+                <option value="vendido">Vendido</option>
+            </select>
+
+            <label for="value">Valor (R$)</label>
+            <input type="number" id="value" placeholder="Ex: 350000" required>
+
+            <button type="submit">Adicionar Imóvel</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Localização</th>
+                    <th>Status</th>
+                    <th>Valor (R$)</th>
+                </tr>
+            </thead>
+            <tbody id="property-list">
+                <!-- Imóveis serão listados aqui -->
+            </tbody>
+        </table>
+        <button id="export-btn">Exportar para Excel</button>
+    </div>
+    <script src="script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+
+</html>
