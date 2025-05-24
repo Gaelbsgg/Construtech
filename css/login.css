@@ -7,6 +7,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 1rem; /* evitar que conteúdo fique colado nas bordas */
+    box-sizing: border-box;
 }
 
 .login-container {
@@ -16,11 +18,14 @@ body {
     width: 100%;
     max-width: 400px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 img {
     margin: 0 auto 1.5rem;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .form-group {
@@ -41,6 +46,7 @@ input[type="password"] {
     border-radius: 4px;
     background-color: #333333;
     color: #FFFFFF;
+    font-size: 1rem;
 }
 
 button {
@@ -64,4 +70,30 @@ button:hover {
     color: #FF0000;
     margin-top: 1rem;
     text-align: center;
+}
+
+/* --------- RESPONSIVIDADE --------- */
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+        height: auto; /* para permitir scroll se necessário */
+    }
+
+    .login-container {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.6rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
 }
