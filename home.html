@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Construtech</title>
+    <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+    <header class="header">
+        <button id="menuButton" class="menu-button">☰</button>
+        <h1 id="usernameDisplay"></h1>
+    </header>
+
+    <nav id="sideMenu" class="side-menu hidden">
+        <ul>
+            <li><a href="#">Orçamentos</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Construções</a></li>
+            <li><a href="#">Alvarás</a></li>
+            <li><a href="#">Incorporações</a></li>
+            <li><a href="#">Financeiro</a></li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section class="news-section">
+            <h2>Notícias Recentes</h2>
+
+            <div class="iframe-container">
+                <button class="toggle-button" data-target="iframeCNN">Mostrar CNN</button>
+                <iframe
+                    id="iframeCNN"
+                    src="https://www.cnnbrasil.com.br/economia/financas/"
+                    frameborder="0"
+                ></iframe>
+            </div>
+
+            <div class="iframe-container">
+                <button class="toggle-button" data-target="iframeG1">Mostrar G1</button>
+                <iframe
+                    id="iframeG1"
+                    src="https://g1.globo.com/tecnologia/"
+                    frameborder="0"
+                ></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="script/home.js"></script>
+</body>
+
+</html>
