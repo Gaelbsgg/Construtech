@@ -7,7 +7,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
     if (username === "adm" && password === "adm") {
         alert("Login bem-sucedido!");
-        window.location.href = "index.html";
+        window.location.href = "https://gaelbsgg.github.io/Construtech/home";
     } else {
         errorMessage.textContent = "Usuário ou senha incorretos.";
     }
